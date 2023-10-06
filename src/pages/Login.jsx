@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import TextField from "../components/textField";
 import { validator } from "../utils/validator";
-// import { setUser } from "../redux/slices/userSlice";
+
 import { useDispatch, useSelector } from "react-redux";
-// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { fetchPosts } from "../redux/slices/posts";
+
 import { fetchAuth, selectorIsAuth } from "../redux/slices/auth";
 import { Redirect } from "react-router-dom";
 
@@ -42,7 +41,6 @@ export const Login = () => {
 
   useEffect(() => {
     validate();
-    // console.log("useEfect [data]", data);
   }, [data]);
 
   const handleChange = ({ target }) => {

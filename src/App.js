@@ -7,6 +7,7 @@ import {Post} from './components/Post';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchAuthMe, selectorIsAuth } from './redux/slices/auth';
 import { useEffect } from 'react';
+import { ChangePage } from './components/ChangePage';
 
 
 
@@ -25,8 +26,11 @@ function App() {
       <Route path="/" exact component={Posts}/>
       <Route path="/login" component={Login}/>
       <Route path="/register" component={Registration}/>
-      <Route path="/posts/:id?" component={Post}/>
+      <Route path="/posts/:id/edit" component={ChangePage}/>
+      <Route path="/posts/:id?"  component={Post}/>
+      <Route path="/account/create"  component={ChangePage}/>
       <Route path="/account" component={MyPosts}/>
+      
     </Switch>
   </>
     

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 export const Post = () => {
   const { posts } = useSelector((state) => state.posts);
@@ -29,9 +30,9 @@ export const Post = () => {
         <div className="card-body">
           <h5 className="card-title">{post.title}</h5>
           <p className="card-text">{post.text}</p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
+          <Link to="/" className="btn btn-primary">
+            Перейти ко всем постам
+          </Link>
         </div>
       </div>
     </>
